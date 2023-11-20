@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GundamJT Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Page header -->
+    <header><h1>Welcome to the  GundamJT Store</h1></header>
+    <!-- App ID div for recieving Vue data -->
+    <div id="app">
+        <!-- product-cart component for Cart Section-->
+        <br><br><br><br><br>
+        <product-cart v-bind:cart="cart"></product-cart>
+        <br>
+        <!-- store-product component for Product Section-->
+        <store-product v-bind:premium="premium" @add-to-cart="updateCart"></store-product>
+        <!-- product-tabs component for Review Section -->
+        <br><br><br>
+        <product-tabs></product-tabs>
+        <br>
+    </div>
+
+    <!-- Page footer -->
+    <footer>Copyright Jed Thomson 2023</footer>
+
+    <!-- CDN link to vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- Link to main.js -->
+    <script src="main.js"></script>
+</body>
+</html>
